@@ -21,11 +21,12 @@
                     <span>公司产品</span>
                 </div>
             </template>
-            <el-carousel v-if="loopList.length" :interval="4000" type="card" height="200px">
+            <el-carousel v-if="loopList.length" :interval="4000" type="card" height="350px">
                 <el-carousel-item v-for="item in loopList" :key="item._id">
                     <div :style="{
                         backgroundImage: 'url(' + 'http://localhost:3000'+item.cover + ')',
-                        backgroundSize:'contain'
+                        backgroundSize:'contain',
+                        height:'350px'
                     }"><h3 text="2xl" justify="center">{{ item.name }}</h3></div>
                 </el-carousel-item>
             </el-carousel>
@@ -36,11 +37,12 @@
                     <span>最近新闻</span>
                 </div>
             </template>
-            <el-carousel v-if="newsLoopList.length" :interval="4000" type="card" height="200px">
+            <el-carousel v-if="newsLoopList.length" :interval="4000" type="card" height="350px">
                 <el-carousel-item v-for="item in newsLoopList" :key="item._id">
                     <div :style="{
                         backgroundImage: 'url(' + 'http://localhost:3000'+item.cover + ')',
-                        backgroundSize:'cover'
+                        backgroundSize:'cover',
+                        height:'350px'
                     }"><h3 text="2xl" justify="center">{{ item.title }}</h3></div>
                 </el-carousel-item>
             </el-carousel>
